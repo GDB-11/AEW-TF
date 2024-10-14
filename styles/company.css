@@ -1,0 +1,165 @@
+.hero-section {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: #1f2937;
+    animation: fade-in 1s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 3.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+.hero-subtitle {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: #4b5563;
+    animation: fade-in 1s ease-in-out;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 18rem;
+    background-color: #155e75;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    animation: fade-in 1s ease-in-out;
+}
+
+.hero-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.company-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .company-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+}
+
+.company-info-card {
+    animation: fade-in 1s ease-in-out;
+}
+
+.company-info-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+@media (min-width: 768px) {
+    .company-info-title {
+        font-size: 1.875rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .company-info-title {
+        font-size: 2.25rem;
+    }
+}
+
+.company-info-text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+@media (min-width: 768px) {
+    .company-info-text {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .company-info-text {
+        font-size: 1.25rem;
+    }
+}
+
+.company-info-list {
+    margin-top: 1rem;
+    list-style-type: disc;
+    padding-left: 1rem;
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+@media (min-width: 768px) {
+    .company-info-list {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .company-info-list {
+        font-size: 1.25rem;
+    }
+}
+
+.company-info-list-item {
+    animation: fade-in 1s ease-in-out;
+}
+
+.company-info-section {
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right, #06b6d4, white);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite, fade-in 2s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    .team-section {
+        padding: 2rem;
+    }
+}
+
+.company-info-text {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #4b5563;
+    animation: fade-in 1s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .company-info-text {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .company-info-text {
+        font-size: 1.25rem;
+    }
+}

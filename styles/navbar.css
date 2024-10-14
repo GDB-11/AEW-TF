@@ -1,0 +1,76 @@
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid #d1d5db;
+    padding: 1rem;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.navbar .brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navbar .logo {
+    height: 2rem;
+}
+
+.navbar .brand-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-left: 0.75rem;
+    color: #000;
+}
+
+.navbar .contact-login {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .contact {
+    font-size: 0.875rem;
+    color: #6b7280;
+    text-decoration: none;
+    margin-right: 1.5rem;
+}
+
+.navbar .contact:hover {
+    text-decoration: underline;
+}
+
+.navbar .login {
+    font-size: 0.875rem;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.navbar .login:hover {
+    text-decoration: underline;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 0;
+    gap: 2rem;
+}
+
+.navbar .menu-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #0f172a;
+    text-decoration: none;
+}
