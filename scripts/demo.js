@@ -1,25 +1,25 @@
 // Sample data
-const columns = [
+let columns = [
     {
         id: 'ToDo',
         name: 'No iniciado',
         tasks: [
-            { id: 1, title: 'Diseño de maquetas de interfaz de usuario', status: 'No iniciado', developer: 'Gianfranco', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
-            { id: 2, title: 'Crear API', status: 'No iniciado', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
+            { id: 1, title: 'Diseño de maquetas de interfaz de usuario', status: 'ToDo', developer: 'Gianfranco', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
+            { id: 2, title: 'Crear API', status: 'ToDo', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
         ]
     },
     {
         id: 'InProcess',
         name: 'En proceso',
         tasks: [
-            { id: 3, title: 'Implementar la autenticación de usuarios', status: 'En proceso', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
+            { id: 3, title: 'Implementar la autenticación de usuarios', status: 'InProcess', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
         ]
     },
     {
         id: 'Done',
         name: 'Terminado',
         tasks: [
-            { id: 4, title: 'Creación del proyecto base', status: 'Terminado', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
+            { id: 4, title: 'Creación del proyecto base', status: 'Done', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
         ]
     }
 ];
@@ -77,57 +77,24 @@ function drop(e) {
     const columnElement = e.target.closest('.column');
     if (columnElement && draggedTask) {
         columnElement.appendChild(draggedTask);
-        updateTaskStatus(draggedTask.dataset.taskId, columnElement.querySelector('h2').textContent);
+        updateTaskStatus(draggedTask.dataset.taskId, columnElement.id);
     }
 }
 
-/*function updateTaskStatus(taskId, newStatus) {
-    debugger;
-    let selectedTask;
-
-    for (let i = 0; i < columns.length; i++) {
-        debugger;
-        const column = columns[i];
-        const task = column.tasks.find(t => t.id == taskId);
-        if (task) {
-            selectedTask = task;
-            task.status = newStatus;
-            column.tasks = column.tasks.filter(t => t.id != taskId);
-            break;
-        }
-    }
-
-    const targetColumn = columns.find(column => column.id == newStatus);
-    debugger;
-    if (targetColumn && selectedTask) {
-        targetColumn.tasks.push(selectedTask);
-    }
-}*/
-
 function updateTaskStatus(taskId, newStatus) {
     let selectedTask;
-    
-    for (let i = 0; i < columns.length; i++) {
-        const task = columns[i].tasks.find(t => t.id == taskId);
 
-        if (task) {
-            selectedTask = task;
+    for (let i = 0; i < columns.length; i++) {
+        let task = columns[i].tasks.find(t => t.id == taskId);
+
+        if (task) {            
             task.status = newStatus;
+            selectedTask = task;
             columns[i].tasks = columns[i].tasks.filter(t => t.id != taskId);
             break;
         }
     }
-    /*columns.forEach(column => {
-        debugger;
-        const task = column.tasks.find(t => t.id == taskId);
-        selectedTask = task;
-
-        if (task) {
-            task.status = newStatus;
-            column.tasks = column.tasks.filter(t => t.id != taskId);
-        }
-    });*/
-
+    
     const targetColumn = columns.find(column => column.id == newStatus);
     if (targetColumn) {
         if (selectedTask) {
@@ -153,9 +120,10 @@ function openTaskDetails(task) {
         <h2>${task.title}</h2>
         <label>Status:</label>
         <select id="taskStatus">
-            <option value="ToDo" ${task.status === 'No iniciado' ? 'selected' : ''}>No iniciado</option>
-            <option value="InProcess" ${task.status === 'En proceso' ? 'selected' : ''}>En proceso</option>
-            <option value="Done" ${task.status === 'Terminado' ? 'selected' : ''}>Terminado</option>
+            <option value=""></option>
+            <option value="ToDo" ${task.status === 'ToDo' ? 'selected' : ''}>No iniciado</option>
+            <option value="InProcess" ${task.status === 'InProcess' ? 'selected' : ''}>En proceso</option>
+            <option value="Done" ${task.status === 'Done' ? 'selected' : ''}>Terminado</option>
         </select>
         <label>Developer:</label>
         <input type="text" id="taskDeveloper" value="${task.developer}">
@@ -216,5 +184,4 @@ function addComment(taskId) {
     }
 }
 
-//
 renderBoard();
