@@ -118,29 +118,28 @@ function openTaskDetails(task) {
     const taskDetails = document.getElementById('taskDetails');
     taskDetails.innerHTML = `
         <h2>${task.title}</h2>
-        <label>Status:</label>
+        <label>Estado:</label>
         <select id="taskStatus">
-            <option value=""></option>
             <option value="ToDo" ${task.status === 'ToDo' ? 'selected' : ''}>No iniciado</option>
             <option value="InProcess" ${task.status === 'InProcess' ? 'selected' : ''}>En proceso</option>
             <option value="Done" ${task.status === 'Done' ? 'selected' : ''}>Terminado</option>
         </select>
-        <label>Developer:</label>
+        <label>Dev:</label>
         <input type="text" id="taskDeveloper" value="${task.developer}">
         <label>QA:</label>
         <input type="text" id="taskQA" value="${task.qa}">
-        <label>Product Owner:</label>
+        <label>PO:</label>
         <input type="text" id="taskPO" value="${task.productOwner}">
-        <label>Description:</label>
+        <label>Descripción:</label>
         <textarea id="taskDescription" rows="4">${task.description}</textarea>
-        <label>Acceptance Criteria:</label>
+        <label>Criterios de aceptación:</label>
         <textarea id="taskCriteria" rows="4">${task.acceptanceCriteria}</textarea>
         <div class="comments">
             <h3>Comments</h3>
             <div id="commentList"></div>
             <div class="add-comment">
-                <textarea id="newComment" placeholder="Add a comment..." rows="2"></textarea>
-                <button onclick="addComment(${task.id})">Add Comment</button>
+                <textarea id="newComment" placeholder="Comenta aquí..." rows="2"></textarea>
+                <button onclick="addComment(${task.id})">Agregar</button>
             </div>
         </div>
     `;
@@ -158,7 +157,6 @@ function openTaskDetails(task) {
 
 function closeTaskDetails() {
     modal.style.display = 'none';
-    renderBoard();
 }
 
 function renderComments(task) {
@@ -177,7 +175,7 @@ function addComment(taskId) {
     if (newCommentText) {
         const task = columns.flatMap(col => col.tasks).find(t => t.id == taskId);
         if (task) {
-            task.comments.push({ author: 'Current User', text: newCommentText });
+            task.comments.push({ author: 'Visitante', text: newCommentText });
             renderComments(task);
             document.getElementById('newComment').value = '';
         }
