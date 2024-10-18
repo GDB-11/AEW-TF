@@ -4,22 +4,22 @@ let columns = [
         id: 'ToDo',
         name: 'No iniciado',
         tasks: [
-            { id: 1, title: 'Diseño de maquetas de interfaz de usuario', status: 'ToDo', developer: 'Gianfranco', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
-            { id: 2, title: 'Crear API', status: 'ToDo', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
+            { id: 1, title: 'Diseño de maquetas de interfaz de usuario', status: 'ToDo', developer: 'Pablo', qa: 'Melissa', productOwner: 'Gianfranco', description: 'Crear maquetas de interfaz de usuario para las nuevas funcionalidades de la aplicación, asegurando que sean intuitivas y visualmente atractivas.', acceptanceCriteria: 'Las maquetas deben seguir la guía de estilo de la empresa.\nCada sección de la interfaz debe estar representada en la maqueta.\nLas maquetas deben ser aprobadas por el equipo de diseño y el Product Owner.\nLa navegación entre diferentes secciones debe ser clara y coherente.', comments: [{ author: 'Pablo', text: '@Gianfranco ¿Puedo considerar estilos similares a los de esta página? https://frontendmasters.com/'}, { author: 'Gianfranco', text: '@Pablo Adelante.'}] },
+            { id: 2, title: 'Crear API', status: 'ToDo', developer: 'Job', qa: 'Melissa', productOwner: 'Gianfranco', description: 'Desarrollar una API que permita la interacción entre el front-end y el back-end de la aplicación, asegurando que sea segura y escalable.', acceptanceCriteria: 'La API debe seguir los principios RESTful.\nDebe incluir documentación clara para todos los endpoints.\nDebe manejar la autenticación y autorización de usuarios.\nLos endpoints deben ser probados exhaustivamente con tests automatizados.\nLa API debe manejar errores de manera eficiente y proporcionar respuestas adecuadas.', comments: [{ author: 'Melissa', text: 'Realizaré mis pruebas con la ayuda de Postman'}] },
         ]
     },
     {
         id: 'InProcess',
         name: 'En proceso',
         tasks: [
-            { id: 3, title: 'Implementar la autenticación de usuarios', status: 'InProcess', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
+            { id: 3, title: 'Implementar la autenticación de usuarios', status: 'InProcess', developer: 'Pablo', qa: 'Melissa', productOwner: 'Gianfranco', description: 'Desarrollar un sistema de autenticación que permita a los usuarios registrarse, iniciar sesión y gestionar sus perfiles de manera segura.', acceptanceCriteria: 'El sistema de autenticación debe permitir el registro de nuevos usuarios con validación de correo electrónico.\nLos usuarios deben poder iniciar sesión con su nombre de usuario/correo electrónico y contraseña.\nDebe implementarse el cifrado de contraseñas para almacenarlas de forma segura.\nEl sistema debe incluir opciones para la recuperación de contraseñas olvidadas.\nDeben realizarse pruebas de seguridad para asegurar la protección contra ataques de fuerza bruta y otros tipos de vulnerabilidades.', comments: [{ author: 'Job', text: 'Inicialmente yo tomaría esta tarea, pero @Pablo la realizará tras incorporarse al equipo.'}] },
         ]
     },
     {
         id: 'Done',
         name: 'Terminado',
         tasks: [
-            { id: 4, title: 'Creación del proyecto base', status: 'Done', developer: '', qa: '', productOwner: '', description: '', acceptanceCriteria: '', comments: [] },
+            { id: 4, title: 'Creación del proyecto base', status: 'Done', developer: 'Job', qa: '', productOwner: 'Gianfranco', description: 'Configurar la estructura inicial del proyecto, incluyendo la configuración de herramientas de desarrollo, estructura de carpetas y archivos, y la integración de sistemas de control de versiones.', acceptanceCriteria: 'La estructura del proyecto debe seguir las mejores prácticas de la industria y la guía de estilos del equipo.\nDebe configurarse un sistema de control de versiones (por ejemplo, Git) y el repositorio inicial debe estar creado.\nIncluir archivos de configuración esenciales como .gitignore, README.md, y cualquier archivo de configuración para herramientas de desarrollo necesarias.\nDeben estar creadas las carpetas y archivos base para el proyecto, como src/, tests/, docs/, etc.\nTodos los miembros del equipo deben poder clonar el repositorio y ejecutar una configuración básica para comenzar a trabajar.', comments: [{ author: 'Job', text: 'Tarea culminada.'}] },
         ]
     }
 ];
