@@ -5,24 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agile Pro Demo</title>
     <link href="./../styles/site.css" rel="stylesheet">
+    <link href="../styles/navbar.css" rel="stylesheet">
+    <link href="../styles/footer.css" rel="stylesheet">
     <link href="./../styles/demo.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Agile Pro Demo</h1>
-        <div id="board" class="board">
-            
-        </div>
-    </div>
-
-    <div id="taskModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="taskDetails" class="task-details">
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="brand">
+                    <img src="../img/svg/logo.svg" class="logo" alt="Agile Pro" />
+                    <span class="brand-name">Agile Pro</span>
+                </a>
+                <div class="contact-login">
+                    <a href="#" class="login">Login</a>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar">
+            <div class="container">
+                <div class="menu">
+                    <ul class="menu-list">
+                        <li><a href="/" class="menu-link">Inicio</a></li>
+                        <li><a href="./company.html" class="menu-link">Nosotros</a></li>
+                        <li><a href="./features.html" class="menu-link">Características</a></li>
+                        <li><a href="./pricing.html" class="menu-link">Precios</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Agile Pro Demo</h1>
+            <div id="board" class="board">
                 
             </div>
         </div>
-    </div>
+    
+        <div id="taskModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="taskDetails" class="task-details">
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <span class="footer-text">© 2024 <a href="index.html" class="footer-link">Agile Pro™</a>. Todos los derechos
+                reservados.</span>
+            <ul class="footer-menu">
+                <li><a href="/" class="footer-link">Inicio</a></li>
+                <li><a href="./company.html" class="footer-link">Nosotros</a></li>
+                <li><a href="./features.html" class="footer-link">Características</a></li>
+                <li><a href="./pricing.html" class="footer-link">Precios</a></li>
+            </ul>
+        </div>
+    </footer>
     <script type="text/javascript" src="./../scripts/demo.js"></script>
 </body>
 </html>

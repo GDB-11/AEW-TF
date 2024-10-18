@@ -165,7 +165,7 @@ function renderComments(task) {
     task.comments.forEach(comment => {
         const commentElement = document.createElement('div');
         commentElement.className = 'comment';
-        commentElement.innerHTML = `<strong>${comment.author}</strong>: ${comment.text}`;
+        commentElement.innerHTML = `<strong>${comment.author}</strong>: ${convertText(comment.text)}`;
         commentList.appendChild(commentElement);
     });
 }
@@ -180,6 +180,14 @@ function addComment(taskId) {
             document.getElementById('newComment').value = '';
         }
     }
+}
+
+function convertText(inputString) {
+    let result = inputString.replace(/(@\w+)/g, '<span style="color: blue; text-decoration: underline; font-weight: bold; cursor: pointer;">$1</span>');
+    
+    result = result.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>');
+    
+    return result;
 }
 
 renderBoard();
