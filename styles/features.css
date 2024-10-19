@@ -102,3 +102,34 @@
 .text-left {
     text-align: left;
 }
+
+.why-agile-pro {
+    padding: 50px 20px;
+    text-align: center;
+    color: #0f172a;
+}
+.why-title {
+    color: #155e75;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.why-content {
+    max-width: 800px;
+    margin: auto;
+}
+.why-list {
+    list-style-type: none;
+    padding: 0;
+}
+.why-list-item {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+@media (max-width: 600px) {
+    .why-title {
+        font-size: 1.5rem;
+    }
+    .why-list-item {
+        font-size: 1rem;
+    }
+}
