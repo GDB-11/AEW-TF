@@ -5,12 +5,6 @@
     --background-color: #f0f9ff;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     background-color: var(--background-color);
     line-height: 1.6;
