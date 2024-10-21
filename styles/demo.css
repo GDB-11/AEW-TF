@@ -173,3 +173,9 @@ body {
     cursor: pointer;
     border-radius: 3px;
 }
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

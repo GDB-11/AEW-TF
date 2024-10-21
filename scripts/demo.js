@@ -139,7 +139,10 @@ function openTaskDetails(task) {
             <div id="commentList"></div>
             <div class="add-comment">
                 <textarea id="newComment" placeholder="Comenta aquí..." rows="2"></textarea>
-                <button onclick="addComment(${task.id})">Agregar</button>
+                <div class="space-between">
+                    <button onclick="addComment(${task.id})">Agregar</button>
+                    <button onclick="saveChanges(${task.id})">Guardar</button>
+                </div>
             </div>
         </div>
     `;
@@ -188,6 +191,31 @@ function convertText(inputString) {
     result = result.replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank">$1</a>');
     
     return result;
+}
+
+function saveChanges(taskId) {
+    const taskStatus = document.getElementById("taskStatus").value;
+    const taskDeveloper = document.getElementById("taskDeveloper").value;
+    const taskQA = document.getElementById("taskQA").value;
+    const taskPO = document.getElementById("taskPO").value;
+    const taskDescription = document.getElementById("taskDescription").value;
+    const taskCriteria = document.getElementById("taskCriteria").value;
+
+    for (const column of columns) {
+        for (const task of column.tasks) {
+            if (task.id === taskId) {
+                task.status = taskStatus;
+                task.developer = taskDeveloper;
+                task.qa = taskQA;
+                task.productOwner = taskPO;
+                task.description = taskDescription;
+                task.acceptanceCriteria = taskCriteria;
+                break;
+            }
+        }
+    }
+    
+    closeTaskDetails();
 }
 
 renderBoard();
