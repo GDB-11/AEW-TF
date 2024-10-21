@@ -123,17 +123,17 @@ h1 {
 
 .popular {
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .popular::after {
     content: 'Popular';
     position: absolute;
     top: 30px;
-    right: -35px;
+    right: -45px;
     background-color: var(--accent-color);
     color: #ffffff;
-    padding: 5px 40px;
+    padding: 5px 70px;
     transform: rotate(45deg);
     font-size: 0.9rem;
     font-weight: bold;
