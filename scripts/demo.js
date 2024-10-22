@@ -135,7 +135,7 @@ function openTaskDetails(task) {
         <label>Criterios de aceptación:</label>
         <textarea id="taskCriteria" rows="4">${task.acceptanceCriteria}</textarea>
         <div class="comments">
-            <h3>Comments</h3>
+            <h3>Commentarios</h3>
             <div id="commentList"></div>
             <div class="add-comment">
                 <textarea id="newComment" placeholder="Comenta aquí..." rows="2"></textarea>
